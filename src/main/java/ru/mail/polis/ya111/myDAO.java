@@ -17,9 +17,7 @@ public class myDAO implements DAO {
     @NotNull
     @Override
     public Iterator<Record> iterator(@NotNull final ByteBuffer from) throws IOException {
-        return data.tailMap(from)
-                .values()
-                .iterator();
+        return data.tailMap(from).values().iterator();
     }
 
     @Override
