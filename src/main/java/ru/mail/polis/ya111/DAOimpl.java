@@ -38,8 +38,12 @@ public class DAOimpl implements DAO {
     // State
     private int generation;
 
+
     /**
-     * Created LsmDao from storage with limit = flushThreshold.
+     * Create DAOimpl from storage with limit
+     * @param storage path to data
+     * @param flushThreshold max heap
+     * @throws IOException incorrect base
      */
     public DAOimpl(@NotNull final File storage, final long flushThreshold) throws IOException {
         assert flushThreshold > 0L;

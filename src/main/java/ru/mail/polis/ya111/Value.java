@@ -8,6 +8,11 @@ public final class Value implements Comparable<Value> {
     private final long timestamp;
     private final ByteBuffer data;
 
+    /**
+     * Creates value from ByteBuffer
+     * @param timestamp time of creation
+     * @param data buffer to get data value
+     */
     public Value(final long timestamp, final ByteBuffer data) {
         assert timestamp >= 0L;
         this.timestamp = timestamp;

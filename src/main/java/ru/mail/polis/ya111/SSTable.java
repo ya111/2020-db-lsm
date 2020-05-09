@@ -14,8 +14,11 @@ public class SSTable implements Table {
     private final int rows;
     private final long fileSize;
 
+
     /**
      * Creates SSTable from file.
+     * @param file represent table
+     * @throws IOException if can't read channel
      */
     public SSTable(@NotNull final File file) throws IOException {
         this.fileChannel = FileChannel.open(file.toPath(), StandardOpenOption.READ);
@@ -25,8 +28,13 @@ public class SSTable implements Table {
         this.rows = buf.rewind().getInt();
     }
 
+
     /**
      * saves SSTable to file.
+     * @param file represent table
+     * @param cellIterator cell's iterator
+     * @param rows num of rows
+     * @throws IOException if can't read channel
      */
     public static void serialize(final File file, final Iterator<Cell> cellIterator,
                                  final int rows) throws IOException {
