@@ -1,6 +1,5 @@
 package ru.mail.polis.ya111;
 
-
 import com.google.common.collect.Iterators;
 import org.jetbrains.annotations.NotNull;
 

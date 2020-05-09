@@ -29,5 +29,3 @@ public final class Cell {
         return value;
     }
 }
-
-
