@@ -14,7 +14,6 @@ public class SSTable implements Table {
     private final int rows;
     private final long fileSize;
 
-
     /**
      * Creates SSTable from file.
      * @param file represent table
@@ -27,7 +26,6 @@ public class SSTable implements Table {
         fileChannel.read(buf, this.fileSize - Integer.BYTES);
         this.rows = buf.rewind().getInt();
     }
-
 
     /**
      * saves SSTable to file.

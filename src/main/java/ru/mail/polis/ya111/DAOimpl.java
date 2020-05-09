@@ -38,7 +38,6 @@ public class DAOimpl implements DAO {
     // State
     private int generation;
 
-
     /**
      * Create DAOimpl from storage with limit
      * @param storage path to data
