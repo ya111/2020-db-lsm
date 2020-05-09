@@ -9,7 +9,7 @@ public final class Value implements Comparable<Value> {
     private final ByteBuffer data;
 
     /**
-     * Creates value from ByteBuffer
+     * Creates value from ByteBuffer.
      * @param timestamp time of creation
      * @param data buffer to get data value
      */

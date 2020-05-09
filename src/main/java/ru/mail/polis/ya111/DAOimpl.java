@@ -39,7 +39,7 @@ public class DAOimpl implements DAO {
     private int generation;
 
     /**
-     * Create DAOimpl from storage with limit
+     * Create DAOimpl from storage with limit.
      * @param storage path to data
      * @param flushThreshold max heap
      * @throws IOException incorrect base
