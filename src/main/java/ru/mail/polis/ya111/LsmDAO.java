@@ -21,8 +21,8 @@ import java.util.NavigableMap;
 import java.util.TreeMap;
 import java.util.stream.Stream;
 
-public class DAOimpl implements DAO {
-    private static final Logger log = LoggerFactory.getLogger(DAOimpl.class);
+public class LsmDAO implements DAO {
+    private static final Logger log = LoggerFactory.getLogger(LsmDAO.class);
 
     private static String SUFFIX = ".dat";
     private static String TEMP = ".tmp";
@@ -39,12 +39,12 @@ public class DAOimpl implements DAO {
     private int generation;
 
     /**
-     * Create DAOimpl from storage with limit when save to storage.
-     * @param storage path to data
-     * @param flushThreshold max heap when need to flush memory table
+     * Creates new LSM database
+     * @param storage path to sstable directory
+     * @param flushThreshold size on bytes that need to flush mem table
      * @throws IOException incorrect base
      */
-    public DAOimpl(@NotNull final File storage, final long flushThreshold) throws IOException {
+    public LsmDAO(@NotNull final File storage, final long flushThreshold) throws IOException {
         assert flushThreshold > 0L;
         this.storage = storage;
         this.flushThreshold = flushThreshold;
