@@ -39,7 +39,7 @@ public class LsmDAO implements DAO {
     private int generation;
 
     /**
-     * Creates new LSM database
+     * Creates new LSM database.
      * @param storage path to sstable directory
      * @param flushThreshold size on bytes that need to flush mem table
      * @throws IOException incorrect base
