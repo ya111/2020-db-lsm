@@ -39,9 +39,9 @@ public class DAOimpl implements DAO {
     private int generation;
 
     /**
-     * Create DAOimpl from storage with limit.
+     * Create DAOimpl from storage with limit when save to storage.
      * @param storage path to data
-     * @param flushThreshold max heap
+     * @param flushThreshold max heap when need to flush memory table
      * @throws IOException incorrect base
      */
     public DAOimpl(@NotNull final File storage, final long flushThreshold) throws IOException {
